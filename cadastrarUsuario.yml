@@ -1,0 +1,30 @@
+info:
+  name: cadastrarUsuario
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://jsonplaceholder.typicode.com/users
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Carolina Mesquita",
+          "username": "Nina",
+          "email": "caroltiqa@email.com",
+          "address": {
+            "street": "Rua 2 lote 9",
+            "suite": "Bloco a apto 04",
+            "city": "Valparaiso de Goias",
+            "zipcode": "75875155"
+          }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

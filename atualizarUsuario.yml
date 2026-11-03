@@ -1,0 +1,31 @@
+info:
+  name: atualizarUsuario
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: https://jsonplaceholder.typicode.com/users/1
+  body:
+    type: json
+    data: |-
+      {
+       "id":1,
+        "name": "Carolina Mesquita",
+          "username": "Nina",
+          "email": "caroltiq.novo@email.com",
+          "address": {
+            "street": "Rua 2 lote 9",
+            "suite": "Bloco a apto 04",
+            "city": "Valparaiso de Goias",
+            "zipcode": "75875155"
+          }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
